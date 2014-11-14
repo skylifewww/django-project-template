@@ -27,7 +27,7 @@ env/
 .env
 
 # Project
-#/public/
+/public/
 
 # Settings
 settings_local.py
