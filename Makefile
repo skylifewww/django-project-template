@@ -1,11 +1,9 @@
 PROJECT_NAME = "{{ project_name }}"
 DB_NAME = "{{ project_name }}"
 
-APPS = "common" "user"
+default: req local_settings db bower_install collect_static test end
 
-default: req settings db bower_install collect_static test end
-
-settings:
+local_settings:
 	@echo "Emitting local development settings module"
 	@cp settings/local.py.example settings/local.py
 
