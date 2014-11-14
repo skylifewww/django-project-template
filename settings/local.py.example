@@ -1,0 +1,25 @@
+from settings import DEVELOPMENT, INSTALLED_APPS, MIDDLEWARE_CLASSES
+
+DOMAIN = 'localhost:8000'
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+DOMAIN = 'localhost:8000'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{{ project_name }}',
+        'USER': '',
+    }
+}
+
+# if DEVELOPMENT:
+#     # debug toolbar settings
+#     INTERNAL_IPS = ('127.0.0.1',)
+#     DEBUG_TOOLBAR_PATCH_SETTINGS = False
+#     INSTALLED_APPS += ('debug_toolbar',)
+#     MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)

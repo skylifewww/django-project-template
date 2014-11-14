@@ -24,12 +24,6 @@ def intspace(value):
 
 @lib.global_function
 def set_param(request=None, url=None, **kwargs):
-    """
-    # http://localhost:8000/?q=test&page=3
-    <a href="{{ set_param(request, page=4) }}">Page 4</a>
-    Result:
-    <a href="/?q=test&page=4">Страница 4</a>
-    """
     if not request and not url:
         return '/'
     url = URL(path=request.path, query=request.META['QUERY_STRING']) if request else URL(url)
