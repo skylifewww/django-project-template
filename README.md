@@ -1,6 +1,8 @@
 {{ project_name }}
 ==================
 
+only for python 3.4
+
 {% if False %}
 To create a new Django project called '**project_name**' using
 django-pirsipy-project, run the following command::
