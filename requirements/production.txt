@@ -1,0 +1,3 @@
+-r base.txt
+cython
+pulsar==0.9.1

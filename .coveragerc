@@ -1,0 +1,9 @@
+[run]
+source = {{ project_name }}
+omit =
+    *init*
+    *urls*
+    *filldb*
+
+[report]
+show_missing = true
