@@ -3,7 +3,7 @@ DB_NAME = "{{ project_name }}"
 
 APPS = "common" "user"
 
-default: req settings db collect_static test end
+default: req settings db bower_install collect_static test end
 
 settings:
 	@echo "Emitting local development settings module"
@@ -68,6 +68,10 @@ clean_images:
 clean_public:
 	@echo "Cleaning *.jpg files"
 	@rm -rf public/*
+
+bower_install:
+	@python manage.py bower_install
+
 
 collect_static:
 	python manage.py collectstatic -l --noinput
