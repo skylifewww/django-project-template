@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db import models
 from django.utils import timezone
@@ -43,7 +41,7 @@ class User(AbstractBaseUser):
 
     class Meta:
         db_table = 'user'
-        ordering = ['name', 'email']
+        ordering = ('name', 'email')
         verbose_name = _('user')
         verbose_name_plural = _('users')
 
@@ -59,5 +57,5 @@ class User(AbstractBaseUser):
     def get_short_name(self):
         return self.name or self.email
 
-    def __unicode__(self):
+    def __str__(self):
         return '{name} <{email}>'.format(name=self.name, email=self.email)

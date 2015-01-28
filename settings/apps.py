@@ -13,7 +13,7 @@ INSTALLED_APPS = (
     'solo',
 
     # apps
-    '{{ project_name }}.config',
+    '{{ project_name }}.conf',
     '{{ project_name }}.core',
     '{{ project_name }}.users',
 )

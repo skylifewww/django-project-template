@@ -1,8 +1,8 @@
 # Database commands
 #
 # MySQL:
-#     create: mysql -uroot -e "drop database if exists db_name;"
-#     drop: mysql -uroot -e "drop database if exists db_name;"
+#     create: mysql -uroot -e "drop database if exists db_name"
+#     drop: mysql -uroot -e "drop database if exists db_name"
 #
 # PostgreSQL:
 #     create: createdb db_name
@@ -22,7 +22,7 @@ def test():
     env.branch = 'master'
     env.db_name = '{{ project_name }}'
 
-if not 'prod' in sys.argv:
+if 'prod' not in sys.argv:
     test()
 
 

@@ -9,6 +9,14 @@ DOMAIN = 'localhost:8000'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = ''
+EMAIL_USE_TLS = ''
+DEFAULT_FROM_EMAIL = 'robot@{{ project_name }}.com'
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',

@@ -15,3 +15,8 @@ if settings.DEVELOPMENT and settings.DEBUG and 'debug_toolbar' in settings.INSTA
     urlpatterns += patterns(
         '',
         url(r'^__debug__/', include(debug_toolbar.urls)))
+
+if settings.DEVELOPMENT or settings.DEBUG:
+    urlpatterns += patterns(
+        'django.views.static',
+        url(r'^media/(?P<path>.*)$', 'serve', {'document_root': settings.MEDIA_ROOT}))

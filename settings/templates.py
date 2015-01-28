@@ -20,4 +20,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
+    '{{ project_name }}.core.context_processors.extra',
 )

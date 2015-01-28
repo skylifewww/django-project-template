@@ -4,11 +4,7 @@ from purl import URL
 
 from django.utils.encoding import force_text
 
-from django_jinja import library
-lib = library.Library()
 
-
-@library.filter
 def intspace(value):
     """
     45570 => 45 570
@@ -22,11 +18,10 @@ def intspace(value):
     return intspace(new)
 
 
-@lib.global_function
 def set_param(request=None, url=None, **kwargs):
     if not request and not url:
         return '/'
     url = URL(path=request.path, query=request.META['QUERY_STRING']) if request else URL(url)
-    for k, v in kwargs.iteritems():
+    for k, v in kwargs.items():
         url = url.query_param(k, v)
     return url.as_string()

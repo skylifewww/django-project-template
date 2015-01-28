@@ -10,7 +10,7 @@ def rel(*x):
 DEBUG = False
 DOMAIN = 'localhost:8000'
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 ALLOWED_HOSTS = [DOMAIN]
 
 USE_X_FORWARDED_HOST = True
