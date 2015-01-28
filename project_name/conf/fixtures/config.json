@@ -1,7 +1,7 @@
 [
 {
   "pk": 1,
-  "model": "config.config",
+  "model": "conf.config",
   "fields": {
     "contacts": "Contact information"
   }
