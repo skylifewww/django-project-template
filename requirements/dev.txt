@@ -1,6 +1,5 @@
 -r base.txt
 django-debug-toolbar==1.2.2
-fabric
 ipython
 pytest-django==2.7.0
 pytest-xdist==1.11
