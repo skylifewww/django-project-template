@@ -78,7 +78,7 @@ compilemessages:
 	python manage.py compilemessages
 
 makemessages:
-	python manage.py makemessages -l ru
+	python manage.py makemessages -l ru -e 'jhtml,html,txt'
 
 flush:
 	@echo "Flushing redis"
