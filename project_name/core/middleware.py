@@ -9,8 +9,7 @@ COORS_ALLOWED_HEADERS = [
 COORS_ALLOWED_CREDENTIALS = True
 COORS_EXPOSE_HEADERS = [
     'x-pagination-count', 'x-paginated', 'x-paginated-by',
-    'x-paginated-by', 'x-pagination-current', 'x-site-host',
-    'x-site-register']
+    'x-pagination-current', 'x-site-host', 'x-site-register']
 
 
 class CoorsMiddleware(object):
