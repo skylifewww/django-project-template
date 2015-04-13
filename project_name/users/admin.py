@@ -6,6 +6,7 @@ from authtools.admin import NamedUserAdmin, BASE_FIELDS, SIMPLE_PERMISSION_FIELD
 from .models import User
 
 
+@admin.register(User)
 class UserAdmin(NamedUserAdmin):
     fieldsets = (
         BASE_FIELDS,
@@ -14,5 +15,4 @@ class UserAdmin(NamedUserAdmin):
     filter_horizontal = ()
 
 
-admin.site.register(User, UserAdmin)
 admin.site.unregister(Group)

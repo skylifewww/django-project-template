@@ -8,7 +8,9 @@ User = get_user_model()
 
 
 class UserFactory(factory.DjangoModelFactory):
-    FACTORY_FOR = User
+
+    class Meta:
+        model = User
 
     @factory.lazy_attribute
     def password(self):
