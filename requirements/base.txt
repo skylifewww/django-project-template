@@ -2,9 +2,9 @@ django
 django-authtools
 django-bower
 django-grappelli
-django-jinja
 django-redis-cache
 django-solo
+jinja2
 factory-boy
 fake-factory
 psycopg2

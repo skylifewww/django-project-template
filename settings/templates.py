@@ -1,17 +1,6 @@
 from settings.base import rel
 
-TEMPLATE_LOADERS = (
-    'django_jinja.loaders.AppLoader',
-    'django_jinja.loaders.FileSystemLoader',
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
-
-TEMPLATE_DIRS = (
-    rel('templates'),
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
+CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
     'django.core.context_processors.debug',
@@ -20,5 +9,19 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    '{{ project_name }}.core.context_processors.extra',
 )
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [rel('templates')],
+        'APP_DIRS': False,
+        'OPTIONS': {'environment': '{{ project_name }}.conf.jinja2.environment'},
+    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {'context_processors': CONTEXT_PROCESSORS},
+    }
+]

@@ -3,8 +3,8 @@ from faker import Factory
 fake = Factory.create()
 
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth import get_user_model
-User = get_user_model()
+
+from .models import User
 
 
 class UserFactory(factory.DjangoModelFactory):

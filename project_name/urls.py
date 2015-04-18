@@ -8,6 +8,7 @@ urlpatterns = patterns(
     '',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', '{{ project_name }}.views.main', name='main'),
 )
 
 if settings.DEVELOPMENT and settings.DEBUG and 'debug_toolbar' in settings.INSTALLED_APPS:

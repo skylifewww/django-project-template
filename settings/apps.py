@@ -8,7 +8,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # libs
-    'django_jinja',
     'djangobower',
     'solo',
 
