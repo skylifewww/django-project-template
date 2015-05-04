@@ -1,16 +1,7 @@
-from django.contrib.messages import constants as message_constants
-
 from settings.static import rel
 
 # grappelli
 GRAPPELLI_ADMIN_TITLE = '{{ project_name }} - Administration panel'
-
-# jinja2
-DEFAULT_JINJA2_TEMPLATE_EXTENSION = '.jhtml'
-# JINJA2_BYTECODE_CACHE_ENABLE = True  # default False
-JINJA2_CONSTANTS = {
-    'DEFAULT_MESSAGE_LEVELS': message_constants
-}
 
 # rest framework
 # REST_FRAMEWORK = {
