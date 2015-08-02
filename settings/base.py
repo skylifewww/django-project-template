@@ -29,7 +29,6 @@ ROOT_URLCONF = '{{ project_name }}.urls'
 WSGI_APPLICATION = 'wsgi.application'
 
 TESTING = 'test' in sys.argv[0]
-PRODUCTION = 'pulse.py' in sys.argv
 DEVELOPMENT = 'run.py' in sys.argv or 'runserver' in sys.argv or 'collectstatic' in sys.argv
 
 if 'test' in sys.argv:

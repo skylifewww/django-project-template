@@ -11,6 +11,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'djangobower',
     'solo',
+    'pulsar.apps.pulse',
 
     # apps
     '{{ project_name }}.conf',

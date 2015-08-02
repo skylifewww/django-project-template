@@ -10,3 +10,4 @@ factory-boy
 fake-factory
 psycopg2
 purl
+pulsar
