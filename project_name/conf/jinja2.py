@@ -20,6 +20,6 @@ def environment(**options):
         'dir': dir, 'list': list, 'len': len, 'enumerate': enumerate, 'range': range,
         'settings': settings, 'config': config,
         'now': now, 'intspace': intspace, 'set_param': set_param,
-        'static': staticfiles_storage.url, 'url': reverse, '_': ugettext, 'messages': get_messages,
+        'static': staticfiles_storage.url, 'url': reverse, '_': ugettext, 'get_messages': get_messages,
     })
     return env
