@@ -32,7 +32,7 @@ if 'prod' not in sys.argv:
 @task
 def manage(command):
     with cd(env.path), prefix(env.prefix):
-        run('python manage.py {}'.format(command))
+        run('python manage.py {0}'.format(command))
 
 
 @task
@@ -48,7 +48,7 @@ def update():
 @task
 def pull():
     with cd(env.path):
-        run('git pull origin {}'.format(env.branch))
+        run('git pull origin {0}'.format(env.branch))
 
 
 @task
