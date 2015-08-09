@@ -9,7 +9,6 @@ INSTALLED_APPS = (
 
     # libs
     'django_extensions',
-    'djangobower',
     'solo',
     'pulsar.apps.pulse',
 

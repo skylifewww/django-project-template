@@ -1,7 +1,7 @@
 PROJECT_NAME = "{{ project_name }}"
 DB_NAME = "{{ project_name }}"
 
-default: req local_settings db bower_install collect_static test end
+default: req local_settings db collect_static test end
 
 local_settings:
 	@echo "Emitting local development settings module"
@@ -9,7 +9,7 @@ local_settings:
 
 req:
 	@echo "Installing requirements"
-	@pip install --exists-action=s -r requirements/dev.txt
+	@pip install -r requirements/dev.txt
 
 db: dropdb createdb migrate loaddata
 
@@ -66,10 +66,6 @@ clean_images:
 clean_public:
 	@echo "Cleaning *.jpg files"
 	@rm -rf public/*
-
-bower_install:
-	@python manage.py bower_install
-
 
 collect_static:
 	python manage.py collectstatic -l --noinput

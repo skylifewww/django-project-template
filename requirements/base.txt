@@ -1,6 +1,5 @@
 django
 django-authtools
-django-bower
 django-extensions
 django-grappelli
 django-redis-cache
