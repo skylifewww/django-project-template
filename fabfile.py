@@ -41,7 +41,7 @@ def update():
     clean()
     requirements()
     collectstatic()
-    compilemessages()
+    # compilemessages()
     migrate()
     restart()
 
