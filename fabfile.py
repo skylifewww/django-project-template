@@ -41,6 +41,7 @@ def update():
     clean()
     requirements()
     collectstatic()
+    compilemessages()
     migrate()
     restart()
 
@@ -96,6 +97,11 @@ def loaddata():
 @task
 def collectstatic():
     manage('collectstatic --noinput')
+
+
+@task
+def compilemessages():
+    manage('compilemessages')
 
 
 @task
