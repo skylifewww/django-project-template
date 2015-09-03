@@ -1,3 +1,4 @@
+ALLOWED_HOSTS = ['testserver']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DATABASES = {
