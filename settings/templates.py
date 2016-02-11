@@ -16,7 +16,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [rel('templates')],
         'APP_DIRS': False,
-        'OPTIONS': {'environment': '{{ project_name }}.conf.jinja2.environment'},
+        'OPTIONS': {'environment': '{{ project_name }}.core.jinja.environment'},
     },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
