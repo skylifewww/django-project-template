@@ -42,7 +42,7 @@ runserver:
 	@python manage.py runserver
 
 runpub:
-	@python run.py --host=0.0.0.0
+	@python manage.py runserver 0.0.0.0:8000
 
 test:
 	@coverage run -m py.test

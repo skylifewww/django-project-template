@@ -1,3 +1,5 @@
+import json
+
 from django.core.urlresolvers import reverse
 from django.test import SimpleTestCase
 from django.test.utils import override_settings
@@ -5,11 +7,11 @@ from django.test.utils import override_settings
 
 @override_settings(CELERY_ALWAYS_EAGER=True, BROKER_BACKEND='memory')
 class TestCase(SimpleTestCase):
-    fixtures = ['config']
+    fixtures = []
 
     def reverse(self, *args, **kwargs):
         return reverse(*args, **kwargs)
-    
+
     def get_ajax(self, *args, **kwargs):
         kwargs.update({'HTTP_X_REQUESTED_WITH': 'XMLHttpRequest'})
         return self.client.get(*args, **kwargs)

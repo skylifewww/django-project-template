@@ -2,11 +2,10 @@ django
 django-authtools
 django-extensions
 django-grappelli
-django-redis-cache
-django-solo
+django-redis
 jinja2
 factory-boy
 fake-factory
 psycopg2
 purl
-pulsar
+uwsgi

@@ -43,7 +43,6 @@ class User(AbstractBaseUser):
     REQUIRED_FIELDS = ['name']
 
     class Meta:
-        db_table = 'user'
         ordering = ('name', 'email')
         verbose_name = _('user')
         verbose_name_plural = _('users')

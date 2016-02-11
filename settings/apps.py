@@ -9,11 +9,8 @@ INSTALLED_APPS = (
 
     # libs
     'django_extensions',
-    'solo',
-    'pulsar.apps.pulse',
 
     # apps
-    '{{ project_name }}.conf',
     '{{ project_name }}.core',
     '{{ project_name }}.users',
 )

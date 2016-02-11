@@ -1,8 +1,6 @@
 {{ project_name }}
 ==================
 
-only for python 3.4
-
 {% if False %}
 To create a new Django project called '**project_name**' using
 django-project-template, run the following command::
